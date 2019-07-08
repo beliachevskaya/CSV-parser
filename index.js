@@ -9,9 +9,6 @@ fs.createReadStream("Users.csv")
     .pipe(csv({
     separator: ";"
 }))
-    .on("headers", function (headers) {
-    // console.log(headers);
-})
     .on("data", function (data) {
     var errors = [];
     config.csv.forEach(function (row) {

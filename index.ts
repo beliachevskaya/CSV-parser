@@ -8,8 +8,6 @@ fs.createReadStream("Users.csv")
   .pipe(csv({
       separator: ";"
   }))
-  .on("headers", (headers: Array<string>) => { 
-  })
   .on("data", function (data) {
     let errors: string[] = [];
     config.csv.forEach((row: config.ColumnDescriptor)=>{

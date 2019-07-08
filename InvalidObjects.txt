@@ -9,7 +9,7 @@
 [Date of registration] Invalid format for '03/13/2014'.
 
 {"ID":"1004","Name":"Max","Surname":"Vasiliev","Mail":"Max@mail.ru","Date of registration":"05.07.2008","Phone":"375 29 14521445"}
-[Phone] Invalid length for '375 29 14521445'.
+[Phone] Invalid format for '375 29 14521445'.
 
 {"ID":"1006","Name":"Oleg","Surname":"Kats","Mail":"Oleg@mail.ru","Date of registration":"29,01,2016","Phone":"375 28 2540033"}
 [Date of registration] Invalid format for '29,01,2016'.
@@ -22,4 +22,4 @@
 
 {"ID":"1008","Name":"Igor","Surname":"Igorov","Mail":"Igor@mail.ru","Date of registration":"25,00,2018","Phone":"375 29 340157"}
 [Date of registration] Invalid format for '25,00,2018'.
-[Phone] Invalid length for '375 29 340157'.
+[Phone] Invalid format for '375 29 340157'.
