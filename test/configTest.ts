@@ -19,8 +19,6 @@ describe ("field test for checkLength", function () {
     });
 });
 
-
-
 describe('field test for checkFormat', function() {
 
     it("should return an empty array", function(){
@@ -45,7 +43,6 @@ describe('field test for checkFormat', function() {
         expect(validators.checkFormat(/^\(?([0-9]{3})\)?[ ]?([0-9]{2})[ ]?([0-9]{7})$/).validate("+375 29 6741324").length).to.eql(1);
         });
 });
-
 
 describe('field test for required', function() {
 
