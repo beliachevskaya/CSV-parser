@@ -10,6 +10,7 @@ function checkLength(min, max) {
         return class_1;
     }());
 }
+exports.checkLength = checkLength;
 ;
 function checkFormat(reg) {
     return new /** @class */ (function () {
@@ -21,8 +22,9 @@ function checkFormat(reg) {
         return class_2;
     }());
 }
+exports.checkFormat = checkFormat;
 ;
-var required = new /** @class */ (function () {
+exports.required = new /** @class */ (function () {
     function class_3() {
     }
     class_3.prototype.validate = function (value) {
@@ -30,7 +32,7 @@ var required = new /** @class */ (function () {
     };
     return class_3;
 }());
-var dateValidator = new /** @class */ (function () {
+exports.dateValidator = new /** @class */ (function () {
     function class_4() {
     }
     class_4.prototype.validate = function (value) {
@@ -49,7 +51,7 @@ exports.csv = [
         type: "ID",
         validators: [
             checkLength(1, 4),
-            required
+            exports.required
         ]
     },
     {
@@ -80,7 +82,7 @@ exports.csv = [
         name: "Date of registration",
         type: "date",
         validators: [
-            dateValidator
+            exports.dateValidator
         ]
     },
     {

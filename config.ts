@@ -1,4 +1,4 @@
-function checkLength(min: number, max: number): Validators {
+export function checkLength(min: number, max: number): Validators {
     return new class implements Validators {
         validate(value: string): string[] {
             return ((value.length >= min) && (value.length <= max)) ? [] : [`Invalid length for '${value}'.`];
@@ -6,7 +6,7 @@ function checkLength(min: number, max: number): Validators {
     }
 };
 
-function checkFormat(reg: RegExp): Validators {
+export function checkFormat(reg: RegExp): Validators {
     return new class implements Validators {
         validate(value: string): string[] {
             return (reg.test(value) !== false) ? [] : [`Invalid format for '${value}'.`];
@@ -14,13 +14,13 @@ function checkFormat(reg: RegExp): Validators {
     }
 };
 
-const required: Validators = new class implements Validators {
+export const required: Validators = new class implements Validators {
     validate(value: string): string[] {
         return (value !== "") ? [] : ["Required field is missed."];
     }
 };
 
-const dateValidator: Validators = new class implements Validators {
+export const dateValidator: Validators = new class implements Validators {
     validate(value: string): string[] {
         const probe: Date = new Date(value);
         const now: Date = new Date();
